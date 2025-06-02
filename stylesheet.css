@@ -5,10 +5,15 @@
   .rotate {
     transform: rotate(90deg);
   }
+  
+  
+  
 body{
   background: black;
-  color:white ;
+  color:white;
 }
+
+
 
 h1{
   border: solid red 5px;
@@ -18,15 +23,51 @@ h1{
   justify-content: center;
 }
 
+h2 {
+margin-top: 20px;
+font-size: 1.5rem;
+color: #ccc;
+}
+
+
 
 button {
-  padding: 12px 20px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  background-color: white;
-  color: black;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  margin: 5px;
+padding: 12px;
+font-size: 0.9rem;
+font-weight: bold;
+background-color: white;
+color: black;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+margin: 0;
+text-align: left;
+width: 100%;
+max-width: 300px;
+}
+
+.button-group button {
+margin: 5px; /* remove if needed, since it's already in button */
+}
+
+
+@media (max-width: 600px) {
+.button-group {
+align-items: stretch;
+}
+}
+
+
+* {
+box-sizing: border-box;
+}
+
+
+footer {
+text-align: center;
+padding: 20px;
+font-size: 14px;
+color: #aaa;
+border-top: 1px solid #333;
+margin-top: 50px;
 }
