@@ -1,126 +1,36 @@
-/* Base setup */
-:root {
-  --primary-color: #1e1e2f;
-  --accent-color: #3e64ff;
-  --bg-color: #f7f9fc;
-  --text-color: #333;
-  --heading-color: #1c1c1c;
-  --button-bg: #3e64ff;
-  --button-text: #fff;
-  --button-hover: #2b4ed5;
-  --border-radius: 12px;
-  --transition-speed: 0.3s;
-  --font-main: 'Inter', system-ui, sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: var(--font-main);
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.7;
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
-}
-
-/* Headings */
-h1, h2 {
-  color: var(--heading-color);
-  margin-bottom: 0.5rem;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-top: 0;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Paragraphs */
-p {
-  margin-bottom: 1.2rem;
-  font-size: 1rem;
-}
-
-/* Image */
-img {
-  border-radius: var(--border-radius);
-  max-width: 100%;
-  height: auto;
-  margin: 1rem 0;
-}
-
-/* Buttons and toggle UI */
-.button-group {
-  margin-top: 2rem;
-}
-
 button {
-  background-color: var(--button-bg);
-  color: var(--button-text);
+  background-color: var(--button-bg, #2b2b2b);
+  color: var(--button-text, white);
   border: none;
   padding: 0.8rem 1.2rem;
   margin: 0.5rem 0;
-  border-radius: var(--border-radius);
+  border-radius: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  transition: background-color var(--transition-speed);
+  gap: 0.75rem;
+  transition: background-color 0.3s ease;
+  text-align: left;
 }
 
 button:hover {
-  background-color: var(--button-hover);
+  background-color: var(--button-hover, #444);
 }
 
-.chevron {
-  margin-left: auto;
-  transition: transform var(--transition-speed);
+.mw-chevron {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-top: 2px;
+  border-style: solid;
+  border-width: 5px 0 5px 8px;
+  border-color: transparent transparent transparent #fff;
+  transition: transform 0.3s ease;
 }
 
-button.open .chevron {
+/* Rotate chevron when open */
+button.open .mw-chevron {
   transform: rotate(90deg);
-}
-
-/* Toggle content */
-#early-life,
-#education,
-#career {
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  background-color: #fff;
-  border-left: 4px solid var(--accent-color);
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* Footer */
-footer {
-  margin-top: 4rem;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  img {
-    float: none !important;
-    margin-left: 0;
-    width: 100% !important;
-  }
-
-  button {
-    font-size: 1rem;
-  }
 }
